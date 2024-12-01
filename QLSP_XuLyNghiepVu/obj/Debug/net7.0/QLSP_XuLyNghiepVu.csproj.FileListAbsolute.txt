@@ -1,0 +1,17 @@
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_XuLyNghiepVu/bin/Debug/net7.0/QLSP_XuLyNghiepVu.deps.json
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_XuLyNghiepVu/bin/Debug/net7.0/QLSP_XuLyNghiepVu.dll
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_XuLyNghiepVu/bin/Debug/net7.0/QLSP_XuLyNghiepVu.pdb
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_XuLyNghiepVu/bin/Debug/net7.0/QLSP_Entity.dll
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_XuLyNghiepVu/bin/Debug/net7.0/QLSP_LuuTru.dll
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_XuLyNghiepVu/bin/Debug/net7.0/QLSP_Entity.pdb
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_XuLyNghiepVu/bin/Debug/net7.0/QLSP_LuuTru.pdb
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_XuLyNghiepVu/obj/Debug/net7.0/QLSP_XuLyNghiepVu.csproj.AssemblyReference.cache
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_XuLyNghiepVu/obj/Debug/net7.0/QLSP_XuLyNghiepVu.GeneratedMSBuildEditorConfig.editorconfig
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_XuLyNghiepVu/obj/Debug/net7.0/QLSP_XuLyNghiepVu.AssemblyInfoInputs.cache
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_XuLyNghiepVu/obj/Debug/net7.0/QLSP_XuLyNghiepVu.AssemblyInfo.cs
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_XuLyNghiepVu/obj/Debug/net7.0/QLSP_XuLyNghiepVu.csproj.CoreCompileInputs.cache
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_XuLyNghiepVu/obj/Debug/net7.0/QLSP_XuLyNghiepVu.csproj.CopyComplete
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_XuLyNghiepVu/obj/Debug/net7.0/QLSP_XuLyNghiepVu.dll
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_XuLyNghiepVu/obj/Debug/net7.0/refint/QLSP_XuLyNghiepVu.dll
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_XuLyNghiepVu/obj/Debug/net7.0/QLSP_XuLyNghiepVu.pdb
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_XuLyNghiepVu/obj/Debug/net7.0/ref/QLSP_XuLyNghiepVu.dll

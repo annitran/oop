@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QLSP_Entity\QLSP_Entity.csproj" />
+    <ProjectReference Include="..\QLSP_LuuTru\QLSP_LuuTru.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,184 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_XuLyNghiepVu/QLSP_XuLyNghiepVu.csproj": {}
+  },
+  "projects": {
+    "/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_Entity/QLSP_Entity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_Entity/QLSP_Entity.csproj",
+        "projectName": "QLSP_Entity",
+        "projectPath": "/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_Entity/QLSP_Entity.csproj",
+        "packagesPath": "/Users/anan/.nuget/packages/",
+        "outputPath": "/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_Entity/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/anan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.317/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_LuuTru/QLSP_LuuTru.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_LuuTru/QLSP_LuuTru.csproj",
+        "projectName": "QLSP_LuuTru",
+        "projectPath": "/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_LuuTru/QLSP_LuuTru.csproj",
+        "packagesPath": "/Users/anan/.nuget/packages/",
+        "outputPath": "/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_LuuTru/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/anan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_Entity/QLSP_Entity.csproj": {
+                "projectPath": "/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_Entity/QLSP_Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.317/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_XuLyNghiepVu/QLSP_XuLyNghiepVu.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_XuLyNghiepVu/QLSP_XuLyNghiepVu.csproj",
+        "projectName": "QLSP_XuLyNghiepVu",
+        "projectPath": "/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_XuLyNghiepVu/QLSP_XuLyNghiepVu.csproj",
+        "packagesPath": "/Users/anan/.nuget/packages/",
+        "outputPath": "/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_XuLyNghiepVu/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/anan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_Entity/QLSP_Entity.csproj": {
+                "projectPath": "/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_Entity/QLSP_Entity.csproj"
+              },
+              "/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_LuuTru/QLSP_LuuTru.csproj": {
+                "projectPath": "/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_LuuTru/QLSP_LuuTru.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.317/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

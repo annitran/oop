@@ -1,0 +1,26 @@
+[
+  {
+    "SoHoaDon": 1,
+    "NgayHoaDon": "2024-11-20T00:00:00",
+    "LoaiHoaDon": "Hoá đơn nhập hàng",
+    "MaHang": 1,
+    "TenHang": "may lanh",
+    "SoLuong": 5
+  },
+  {
+    "SoHoaDon": 2,
+    "NgayHoaDon": "2024-11-30T00:00:00",
+    "LoaiHoaDon": "Hoá đơn bán hàng",
+    "MaHang": 1,
+    "TenHang": "may lanh",
+    "SoLuong": 2
+  },
+  {
+    "SoHoaDon": 3,
+    "NgayHoaDon": "2024-11-30T00:00:00",
+    "LoaiHoaDon": "Hoá đơn nhập hàng",
+    "MaHang": 2,
+    "TenHang": "cam",
+    "SoLuong": 15
+  }
+]

@@ -1,0 +1,24 @@
+﻿@page
+@model do_an_oop.Pages.MH_XoaLoaiHangModel
+@{
+    ViewData["Title"] = "Xoá Loại hàng";
+}
+
+<h1 class="text-center">@ViewData["Title"]</h1>
+<hr />
+<br />
+
+@if (Model.lh != null)
+{
+    <div>
+        <form method="post">
+            <input type="hidden" name="mahang" value="@Model.lh.MaLoaiHang" />
+            <p>Bạn có muốn xoá sản phẩm "@Model.lh.TenLoaiHang" không?</p>
+            <button type="submit" style="background-color: #FFD1DC; color: #000000;">Xóa</button>
+            <a href="/MH_DanhSachLoaiHang" class="btn btn-secondary" style="background-color: #FFD1DC; color: #000000;">Quay lại</a>
+        </form>
+    </div>
+}
+
+<br />
+@Model.ThongBao

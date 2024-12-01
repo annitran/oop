@@ -1,0 +1,64 @@
+﻿@page
+@using QLSP_Entity
+@model do_an_oop.Pages.MH_DanhSachSanPhamModel
+@{
+    ViewData["Title"] = "Danh sách Sản phẩm";
+}
+
+<h1 class="text-center">@ViewData["Title"]</h1>
+<hr />
+<br />
+
+<div>
+    <form method="post">
+        <input type="text" style="width:90%;" name="tukhoa" value="" placeholder="Nhập thông tin sản phẩm cần tìm..." />
+    </form>
+    <a href="/MH_ThemSanPham" class="btn btn-secondary" style="background-color: #FFD1DC; color: #000000;">Thêm sản phẩm</a><br><br>
+</div>
+
+<!-- Hiển thị danh sách sản phẩm -->
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Mã hàng</th>
+                <th scope="col">Tên hàng</th>
+                <th scope="col">NSX</th>
+                <th scope="col">HSD</th>
+                <th scope="col">Tên Công ty sản xuất</th>
+                <th scope="col">Loại hàng</th>
+                <th scope="col">Giá</th>
+                <th scope="col">Lựa chọn</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.DanhSachSanPham != null)
+            {
+                @foreach (SanPham sp in Model.DanhSachSanPham)
+                {
+                    <tr>
+                        <td scope="col">@sp.MaHang</td>
+                        <td>@sp.TenHang</td>
+                        <td>@sp.NSX.ToShortDateString()</td>
+                        <td>@sp.HSD.ToShortDateString()</td>
+                        <td>@sp.CtySX</td>
+                        <td>@sp.LoaiHang</td>
+                        <td>@sp.Gia</td>
+                        <td>
+                            <a href="/MH_SuaSanPham?mahang=@sp.MaHang">Sửa</a>
+                            <a href="/MH_XoaSanPham?mahang=@sp.MaHang">Xoá</a>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="8" class="text-center">
+                        Không tồn tại sản phẩm nào trong danh sách!
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

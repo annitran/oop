@@ -1,0 +1,65 @@
+﻿@page
+@using QLSP_Entity
+@model do_an_oop.Pages.MH_DanhSachHoaDonModel
+@{
+    ViewData["Title"] = "Danh sách Hoá đơn";
+}
+
+<h1 class="text-center">@ViewData["Title"]</h1>
+<hr />
+<br />
+
+<div>
+    <form method="post">
+        <input type="text" style="width:90%;" name="tukhoa" value="" placeholder="Nhập thông tin loại hàng cần tìm..." />
+    </form>
+    <a href="/MH_ThemHoaDon" class="btn btn-secondary" style="background-color: #FFD1DC; color: #000000;">Thêm hoá đơn</a><br><br>
+</div>
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Số hoá đơn</th>
+                <th scope="col">Ngày hoá đơn</th>
+                <th scope="col">Loại hoá đơn</th>
+                <th scope="col">Mã sản phẩm</th>
+                <th scope="col">Tên sản phẩm</th>
+                <th scope="col">Số lượng</th>
+                <th scope="col">Lựa chọn</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @if (Model.DanhSachHoaDon != null)
+            {
+                @foreach (var hoadon in Model.DanhSachHoaDon)
+                {
+                    <tr>
+                        <td>@hoadon.SoHoaDon</td>
+                        <td>@hoadon.NgayHoaDon.ToShortDateString()</td>
+                        <td>@hoadon.LoaiHoaDon</td>
+                        <td>@hoadon.MaHang</td>
+                        <td>@hoadon.TenHang</td>
+                        <td>@hoadon.SoLuong</td>
+                        <td>
+                            <a href="/MH_SuaHoaDon?sohoadon=@hoadon.SoHoaDon">Sửa</a>
+                            <a href="/MH_XoaHoaDon?sohoadon=@hoadon.SoHoaDon">Xoá</a>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="8" class="text-center">
+                        Không tồn tại hoá đơn nào trong danh sách!
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<br />
+@Model.ThongBao

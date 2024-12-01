@@ -1,0 +1,44 @@
+﻿@page
+@using QLSP_Entity
+@model do_an_oop.Pages.MH_ThemHoaDonModel
+@{
+    ViewData["Title"] = "Thêm Hoá đơn";
+}
+
+<div>
+    <form method="post">
+        <label for="fname">Nhập Số hoá đơn:</label><br>
+        <input type="text" name="sohoadon" value="@Model.SoHoaDon"><br>
+        <label for="lname">Nhập ngày hoá đơn:</label><br>
+        <input type="date" name="ngayhoadon" value="@Model.NgayHoaDon"><br>
+
+        <label for="lname">Nhập loại hoá đơn:</label><br>
+        <select name="loaihoadon">
+            <option value="Hoá đơn bán hàng">Hoá đơn bán hàng</option>
+            <option value="Hoá đơn nhập hàng">Hoá đơn nhập hàng</option>
+        </select><br>
+
+        <label for="fname">Nhập sản phẩm:</label><br>
+        <select name="mahang">
+            @foreach (var sp in Model.dssp)
+            {
+                <option value="@sp.MaHang">Mã @sp.MaHang - @sp.TenHang</option>
+            }
+        </select><br>
+        <select name="tenhang">
+            @foreach (var sp in Model.dssp)
+            {
+                <option value="@sp.TenHang">@sp.TenHang</option>
+            }
+        </select><br>
+
+        <label for="lname">Nhập số lượng:</label><br>
+        <input type="text" name="soluong" value="@Model.SoLuong"><br><br>
+
+        <input type="submit" style="background-color: #FFD1DC; color: #000000;" value="Lưu">
+        <a href="/MH_DanhSachHoaDon" class="btn btn-secondary" style="background-color: #FFD1DC; color: #000000;">Quay lại</a>
+    </form>
+</div>
+
+<br />
+@Model.ThongBao

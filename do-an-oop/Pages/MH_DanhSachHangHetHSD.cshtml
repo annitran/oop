@@ -1,0 +1,33 @@
+﻿@page
+@model do_an_oop.Pages.MH_DanhSachHangHetHSDModel
+@{
+    ViewData["Title"] = "Thống kê Hàng hết hạn sử dụng";
+}
+
+<h1 class="text-center">@ViewData["Title"]</h1>
+<hr />
+<br />
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Mã hàng</th>
+                <th scope="col">Tên hàng</th>
+                <th scope="col">Ngày hết hạn sử dụng</th>
+                <th scope="col">Số lượng còn lại</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var sp in Model.DanhSachSanPham)
+            {
+                <tr>
+                    <td scope="col">@sp.MaHang</td>
+                    <td>@sp.TenHang</td>
+                    <td>@sp.HSD.ToShortDateString()</td>
+                    <td>@sp.SoLuongHangTonKho</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,56 @@
+﻿@page
+@using QLSP_Entity
+@model do_an_oop.Pages.MH_DanhSachLoaiHangModel
+@{
+    ViewData["Title"] = "Danh sách Loại hàng";
+}
+
+<h1 class="text-center">@ViewData["Title"]</h1>
+<hr />
+<br />
+
+<div>
+    <form method="post">
+        <input type="text" style="width:90%;" name="tukhoa" value="" placeholder="Nhập thông tin loại hàng cần tìm..." />
+    </form>
+    <a href="/MH_ThemLoaiHang" class="btn btn-secondary" style="background-color: #FFD1DC; color: #000000;">Thêm loại hàng</a><br><br>
+</div>
+
+<!-- Hiển thị danh sách Loại hàng -->
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Mã loại hàng</th>
+                <th scope="col">Tên loại hàng</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.DanhSachLoaiHang != null)
+            {
+                @foreach (var lh in Model.DanhSachLoaiHang)
+                {
+                    <tr>
+                        <td scope="col">@lh.MaLoaiHang</td>
+                        <td>@lh.TenLoaiHang</td>
+                        <td>
+                            <a href="/MH_SuaLoaiHang?maloaihang=@lh.MaLoaiHang">Sửa</a>
+                            <a href="/MH_XoaLoaiHang?maloaihang=@lh.MaLoaiHang">Xoá</a>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="8" class="text-center">
+                        Không tồn tại loại hàng nào trong danh sách!
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<br />
+@Model.ThongBao

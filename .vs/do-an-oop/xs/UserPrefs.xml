@@ -1,0 +1,43 @@
+﻿<Properties StartupConfiguration="{EEC377C7-5AEF-422B-ADED-A23A4CEC0E06}|https">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.do-an-oop PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="do-an-oop/Pages/Shared/_Layout.cshtml">
+    <Files>
+      <File FileName="do-an-oop/Pages/MH_DanhSachHangHetHSD.cshtml" Line="27" Column="52" />
+      <File FileName="do-an-oop/Pages/MH_DanhSachHangHetHSD.cshtml.cs" Line="23" Column="10" />
+      <File FileName="do-an-oop/Pages/MH_ThemHoaDon.cshtml" Line="1" Column="1" />
+      <File FileName="do-an-oop/Pages/Shared/_Layout.cshtml" Line="51" Column="1" />
+      <File FileName="QLSP_XuLyNghiepVu/IXuLyHoaDon.cs" NotebookId="1" />
+      <File FileName="QLSP_XuLyNghiepVu/XuLyHoaDon.cs" Line="84" Column="10" NotebookId="1" />
+      <File FileName="QLSP_LuuTru/ILuuTruHoaDon.cs" NotebookId="1" />
+      <File FileName="QLSP_LuuTru/LuuTruHoaDon.cs" NotebookId="1" />
+      <File FileName="do-an-oop/Pages/MH_XoaLoaiHang.cshtml.cs" Line="20" Column="1" NotebookId="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="do-an-oop" expanded="True">
+            <Node name="do-an-oop">
+              <Node name="Pages" expanded="True">
+                <Node name="Shared" expanded="True">
+                  <Node name="_Layout.cshtml" selected="True" />
+                </Node>
+                <Node name="MH_DanhSachHangHetHSD.cshtml" expanded="True" />
+                <Node name="MH_DanhSachHangTonKho.cshtml" expanded="True" />
+                <Node name="MH_XoaHoaDon.cshtml" expanded="True" />
+                <Node name="MH_XoaLoaiHang.cshtml" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="QLSP_Entity" expanded="True" />
+            <Node name="QLSP_LuuTru" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

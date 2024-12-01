@@ -1,0 +1,14 @@
+[
+  {
+    "MaLoaiHang": 1,
+    "TenLoaiHang": "thoi trang"
+  },
+  {
+    "MaLoaiHang": 2,
+    "TenLoaiHang": "do gia dung"
+  },
+  {
+    "MaLoaiHang": 3,
+    "TenLoaiHang": "thuc pham"
+  }
+]

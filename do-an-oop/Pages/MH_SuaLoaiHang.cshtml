@@ -1,0 +1,26 @@
+﻿@page
+@model do_an_oop.Pages.MH_SuaLoaiHangModel
+@{
+    ViewData["Title"] = "Sửa loại hàng";
+}
+
+<h1 class="text-center">@ViewData["Title"]</h1>
+<hr />
+<br />
+
+@if (Model.lh != null)
+{
+    <div>
+        <form method="post">
+            <label for="fname">Nhập Tên loại hàng:</label><br>
+            <input type="text" name="tenloaihang" value="@Model.TenLoaiHang"><br>
+
+            <input type="submit" style="background-color: #FFD1DC; color: #000000;" value="Lưu">
+            <a href="/MH_DanhSachLoaiHang" class="btn btn-secondary" style="background-color: #FFD1DC; color: #000000;">Quay lại</a>
+            <br />
+        </form>
+    </div>
+}
+
+<br />
+@Model.ThongBao

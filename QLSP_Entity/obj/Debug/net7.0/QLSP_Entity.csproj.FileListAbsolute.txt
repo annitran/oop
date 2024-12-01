@@ -1,0 +1,12 @@
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_Entity/bin/Debug/net7.0/QLSP_Entity.deps.json
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_Entity/bin/Debug/net7.0/QLSP_Entity.dll
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_Entity/bin/Debug/net7.0/QLSP_Entity.pdb
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_Entity/obj/Debug/net7.0/QLSP_Entity.csproj.AssemblyReference.cache
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_Entity/obj/Debug/net7.0/QLSP_Entity.GeneratedMSBuildEditorConfig.editorconfig
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_Entity/obj/Debug/net7.0/QLSP_Entity.AssemblyInfoInputs.cache
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_Entity/obj/Debug/net7.0/QLSP_Entity.AssemblyInfo.cs
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_Entity/obj/Debug/net7.0/QLSP_Entity.csproj.CoreCompileInputs.cache
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_Entity/obj/Debug/net7.0/QLSP_Entity.dll
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_Entity/obj/Debug/net7.0/refint/QLSP_Entity.dll
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_Entity/obj/Debug/net7.0/QLSP_Entity.pdb
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_Entity/obj/Debug/net7.0/ref/QLSP_Entity.dll

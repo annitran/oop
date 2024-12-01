@@ -1,0 +1,22 @@
+[
+  {
+    "MaHang": 1,
+    "TenHang": "may lanh",
+    "NSX": "2024-11-15T00:00:00",
+    "HSD": "2024-11-29T00:00:00",
+    "CtySX": "dien may xanh",
+    "LoaiHang": "1",
+    "Gia": 1200000,
+    "SoLuongHangTonKho": 0
+  },
+  {
+    "MaHang": 2,
+    "TenHang": "cam",
+    "NSX": "2024-11-22T00:00:00",
+    "HSD": "2024-11-27T00:00:00",
+    "CtySX": "bach hoa xanh",
+    "LoaiHang": "3",
+    "Gia": 20,
+    "SoLuongHangTonKho": 0
+  }
+]

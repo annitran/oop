@@ -1,0 +1,155 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "QLSP_Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/QLSP_Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/QLSP_Entity.dll": {}
+        }
+      },
+      "QLSP_LuuTru/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "QLSP_Entity": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/QLSP_LuuTru.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/QLSP_LuuTru.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Newtonsoft.Json/13.0.3": {
+      "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/net6.0/Newtonsoft.Json.dll",
+        "lib/net6.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "QLSP_Entity/1.0.0": {
+      "type": "project",
+      "path": "../QLSP_Entity/QLSP_Entity.csproj",
+      "msbuildProject": "../QLSP_Entity/QLSP_Entity.csproj"
+    },
+    "QLSP_LuuTru/1.0.0": {
+      "type": "project",
+      "path": "../QLSP_LuuTru/QLSP_LuuTru.csproj",
+      "msbuildProject": "../QLSP_LuuTru/QLSP_LuuTru.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "QLSP_Entity >= 1.0.0",
+      "QLSP_LuuTru >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/anan/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_XuLyNghiepVu/QLSP_XuLyNghiepVu.csproj",
+      "projectName": "QLSP_XuLyNghiepVu",
+      "projectPath": "/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_XuLyNghiepVu/QLSP_XuLyNghiepVu.csproj",
+      "packagesPath": "/Users/anan/.nuget/packages/",
+      "outputPath": "/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_XuLyNghiepVu/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/anan/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {
+            "/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_Entity/QLSP_Entity.csproj": {
+              "projectPath": "/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_Entity/QLSP_Entity.csproj"
+            },
+            "/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_LuuTru/QLSP_LuuTru.csproj": {
+              "projectPath": "/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_LuuTru/QLSP_LuuTru.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.317/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

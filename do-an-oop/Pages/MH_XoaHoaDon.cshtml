@@ -1,0 +1,24 @@
+﻿@page
+@model do_an_oop.Pages.MH_XoaHoaDonModel
+@{
+    ViewData["Title"] = "Xoá Hoá đơn";
+}
+
+<h1 class="text-center">@ViewData["Title"]</h1>
+<hr />
+<br />
+
+@if (Model.hd != null)
+{
+    <div>
+        <form method="post">
+            <input type="hidden" name="sohoadon" value="@Model.hd.SoHoaDon" />
+            <p>Bạn có muốn xoá hoá đơn số "@Model.hd.SoHoaDon" không?</p>
+            <button type="submit" style="background-color: #FFD1DC; color: #000000;">Xóa</button>
+            <a href="/MH_DanhSachHoaDon" class="btn btn-secondary" style="background-color: #FFD1DC; color: #000000;">Quay lại</a>
+        </form>
+    </div>
+}
+
+<br />
+@Model.ThongBao

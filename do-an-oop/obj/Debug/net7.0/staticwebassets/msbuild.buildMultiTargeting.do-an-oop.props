@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/do-an-oop.props" />
+</Project>

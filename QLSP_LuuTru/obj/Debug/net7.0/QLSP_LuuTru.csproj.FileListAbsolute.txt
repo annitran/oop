@@ -1,0 +1,15 @@
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_LuuTru/bin/Debug/net7.0/QLSP_LuuTru.deps.json
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_LuuTru/bin/Debug/net7.0/QLSP_LuuTru.dll
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_LuuTru/bin/Debug/net7.0/QLSP_LuuTru.pdb
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_LuuTru/bin/Debug/net7.0/QLSP_Entity.dll
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_LuuTru/bin/Debug/net7.0/QLSP_Entity.pdb
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_LuuTru/obj/Debug/net7.0/QLSP_LuuTru.csproj.AssemblyReference.cache
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_LuuTru/obj/Debug/net7.0/QLSP_LuuTru.GeneratedMSBuildEditorConfig.editorconfig
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_LuuTru/obj/Debug/net7.0/QLSP_LuuTru.AssemblyInfoInputs.cache
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_LuuTru/obj/Debug/net7.0/QLSP_LuuTru.AssemblyInfo.cs
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_LuuTru/obj/Debug/net7.0/QLSP_LuuTru.csproj.CoreCompileInputs.cache
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_LuuTru/obj/Debug/net7.0/QLSP_LuuTru.csproj.CopyComplete
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_LuuTru/obj/Debug/net7.0/QLSP_LuuTru.dll
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_LuuTru/obj/Debug/net7.0/refint/QLSP_LuuTru.dll
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_LuuTru/obj/Debug/net7.0/QLSP_LuuTru.pdb
+/Users/anan/Cá nhân/LTHDT/do-an-oop/QLSP_LuuTru/obj/Debug/net7.0/ref/QLSP_LuuTru.dll
