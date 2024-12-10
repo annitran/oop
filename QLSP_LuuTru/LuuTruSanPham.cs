@@ -3,44 +3,31 @@ using Newtonsoft.Json;
 
 namespace QLSP_LuuTru
 {
-    public class LuuTruSanPham : ILuuTruSanPham
+    public class LuuTruSanPham : XuLyLuuTru<SanPham>
     {
         private const string filePath = "/Users/anan/Cá nhân/LTHDT/do-an-oop/dssp.json";
 
-        public List<SanPham> DocDanhSachSanPham()
+        public override string getfilePath()
         {
-            StreamReader file = new StreamReader(filePath);
-            string dssp_json = file.ReadToEnd();
-            var dssp = JsonConvert.DeserializeObject<List<SanPham>>(dssp_json);
-            file.Close();
-
-            return dssp;
+            return filePath;
         }
 
-        public void LuuDanhSachSanPham(List<SanPham> dssp)
+        public override bool TimTheoTen(string tenhang)
         {
-            string dssp_json = JsonConvert.SerializeObject(dssp, Formatting.Indented);
-            StreamWriter file = new StreamWriter(filePath);
-            file.Write(dssp_json);
-            file.Close();
-        }
-
-        public SanPham TimSanPhamTheoTen(string tenhang)
-        {
-            List<SanPham> dssp = DocDanhSachSanPham();
+            List<SanPham> dssp = DocDanhSach();
             foreach (var sp in dssp)
             {
                 if (sp.TenHang == tenhang)
                 {
-                    return sp;
+                    throw new Exception("Đã tồn tại sản phẩm này!");
                 }
             }
-            return null;
+            return true;
         }
 
-        public SanPham TimSanPhamTheoID(int mahang)
+        public override SanPham TimTheoID(int mahang)
         {
-            List<SanPham> dssp = DocDanhSachSanPham();
+            List<SanPham> dssp = DocDanhSach();
             foreach (var sp in dssp)
             {
                 if (sp.MaHang == mahang)
@@ -51,9 +38,9 @@ namespace QLSP_LuuTru
             return null;
         }
 
-        public void Them(SanPham sp)
+        public override void Them(SanPham sp)
         {
-            List<SanPham> dssp = DocDanhSachSanPham();
+            List<SanPham> dssp = DocDanhSach();
             int maxId = 0;
             foreach (var s in dssp)
             {
@@ -64,12 +51,12 @@ namespace QLSP_LuuTru
             }
             sp.MaHang = maxId + 1;
             dssp.Add(sp);
-            LuuDanhSachSanPham(dssp);
+            LuuDanhSach(dssp);
         }
 
-        public void Sua(SanPham sp)
+        public override void Sua(SanPham sp)
         {
-            List<SanPham> dssp = DocDanhSachSanPham();
+            List<SanPham> dssp = DocDanhSach();
             for (int i = 0; i < dssp.Count; i++)
             {
                 if (dssp[i].MaHang == sp.MaHang)
@@ -77,12 +64,12 @@ namespace QLSP_LuuTru
                     dssp[i] = sp;
                 }
             }
-            LuuDanhSachSanPham(dssp);
+            LuuDanhSach(dssp);
         }
 
-        public void Xoa(int mahang)
+        public override void Xoa(int mahang)
         {
-            List<SanPham> dssp = DocDanhSachSanPham();
+            List<SanPham> dssp = DocDanhSach();
             for (int i = dssp.Count - 1; i >= 0; i--)
             {
                 if (dssp[i].MaHang == mahang)
@@ -90,7 +77,7 @@ namespace QLSP_LuuTru
                     dssp.RemoveAt(i);
                 }
             }
-            LuuDanhSachSanPham(dssp);
+            LuuDanhSach(dssp);
         }
     }
 }

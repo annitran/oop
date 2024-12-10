@@ -1,14 +1,18 @@
 [
   {
-    "MaLoaiHang": 1,
-    "TenLoaiHang": "thoi trang"
-  },
-  {
     "MaLoaiHang": 2,
     "TenLoaiHang": "do gia dung"
   },
   {
     "MaLoaiHang": 3,
     "TenLoaiHang": "thuc pham"
+  },
+  {
+    "MaLoaiHang": 4,
+    "TenLoaiHang": "nuoc hoa"
+  },
+  {
+    "MaLoaiHang": 5,
+    "TenLoaiHang": "thoi trang"
   }
 ]

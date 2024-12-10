@@ -4,31 +4,18 @@ using QLSP_Entity;
 
 namespace QLSP_LuuTru
 {
-	public class LuuTruHoaDon : ILuuTruHoaDon
+	public class LuuTruHoaDon : XuLyLuuTru<HoaDon>
 	{
         private const string filePath = "/Users/anan/Cá nhân/LTHDT/do-an-oop/dshd.json";
 
-        public List<HoaDon> DocDanhSachHoaDon()
+        public override string getfilePath()
         {
-            StreamReader file = new StreamReader(filePath);
-            string dshd_json = file.ReadToEnd();
-            var dshd = JsonConvert.DeserializeObject<List<HoaDon>>(dshd_json);
-            file.Close();
-
-            return dshd;
+            return filePath;
         }
 
-        public void LuuDanhSachHoaDon(List<HoaDon> dshd)
+        public override HoaDon TimTheoID(int sohoadon)
         {
-            string dshd_json = JsonConvert.SerializeObject(dshd, Formatting.Indented);
-            StreamWriter file = new StreamWriter(filePath);
-            file.Write(dshd_json);
-            file.Close();
-        }
-
-        public HoaDon Tim(int sohoadon)
-        {
-            List<HoaDon> dshd = DocDanhSachHoaDon();
+            List<HoaDon> dshd = DocDanhSach();
             foreach (var hd in dshd)
             {
                 if (hd.SoHoaDon == sohoadon)
@@ -39,9 +26,9 @@ namespace QLSP_LuuTru
             return null;
         }
 
-        public void Them(HoaDon hd)
+        public override void Them(HoaDon hd)
         {
-            List<HoaDon> dshd = DocDanhSachHoaDon();
+            List<HoaDon> dshd = DocDanhSach();
             int maxId = 0;
             foreach (var s in dshd)
             {
@@ -52,12 +39,12 @@ namespace QLSP_LuuTru
             }
             hd.SoHoaDon = maxId + 1;
             dshd.Add(hd);
-            LuuDanhSachHoaDon(dshd);
+            LuuDanhSach(dshd);
         }
 
-        public void Sua(HoaDon hd)
+        public override void Sua(HoaDon hd)
         {
-            List<HoaDon> dshd = DocDanhSachHoaDon();
+            List<HoaDon> dshd = DocDanhSach();
             for (int i = 0; i < dshd.Count; i++)
             {
                 if (dshd[i].SoHoaDon == hd.SoHoaDon)
@@ -65,12 +52,12 @@ namespace QLSP_LuuTru
                     dshd[i] = hd;
                 }
             }
-            LuuDanhSachHoaDon(dshd);
+            LuuDanhSach(dshd);
         }
 
-        public void Xoa(int sohoadon)
+        public override void Xoa(int sohoadon)
         {
-            List<HoaDon> dshd = DocDanhSachHoaDon();
+            List<HoaDon> dshd = DocDanhSach();
             for (int i = dshd.Count - 1; i >= 0; i--)
             {
                 if (dshd[i].SoHoaDon == sohoadon)
@@ -78,7 +65,7 @@ namespace QLSP_LuuTru
                     dshd.RemoveAt(i);
                 }
             }
-            LuuDanhSachHoaDon(dshd);
+            LuuDanhSach(dshd);
         }
     }
 }

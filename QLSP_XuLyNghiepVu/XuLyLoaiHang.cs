@@ -3,18 +3,16 @@ using QLSP_LuuTru;
 
 namespace QLSP_XuLyNghiepVu
 {
-	public class XuLyLoaiHang : IXuLyLoaiHang
+	public class XuLyLoaiHang : XuLyNghiepVu<LoaiHang>
 	{
-        private ILuuTruLoaiHang _ltlh;
-
-        public XuLyLoaiHang(ILuuTruLoaiHang ltlh)
+        public XuLyLoaiHang(IXuLyLuuTru<LoaiHang> xllt) : base(xllt)
         {
-            _ltlh = ltlh;
+
         }
 
-        public List<LoaiHang> HienThi_DSLH(string tuKhoa = "")
+        public override List<LoaiHang> HienThi_DanhSach(string tuKhoa = "")
         {
-            List<LoaiHang> dslh = _ltlh.DocDanhSachLoaiHang();
+            List<LoaiHang> dslh = _xllt.DocDanhSach();
             List<LoaiHang> ds_tim_kiem = new List<LoaiHang>();
             //lọc theo từ khoá
             if (string.IsNullOrEmpty(tuKhoa))
@@ -34,29 +32,13 @@ namespace QLSP_XuLyNghiepVu
             }
         }
 
-        public LoaiHang TimLoaiHang(int maloaihang)
+        public override void Them(LoaiHang lh)
         {
-            return _ltlh.TimTheoID(maloaihang);
-        }
-
-        public void ThemLoaiHang(LoaiHang lh)
-        {
-            LoaiHang? tim_loai_hang = _ltlh.TimLoaiHangTheoTen(lh.TenLoaiHang);
-            if (tim_loai_hang != null)
+            bool tim_loai_hang = _xllt.TimTheoTen(lh.TenLoaiHang);
+            if (tim_loai_hang)
             {
-                throw new Exception("Loại hàng này đã tồn tại! Mời nhập lại!");
+                _xllt.Them(lh);
             }
-            _ltlh.Them(lh);
-        }
-
-        public void SuaLoaiHang(LoaiHang lh)
-        {
-            _ltlh.Sua(lh);
-        }
-
-        public void XoaLoaiHang(int maloaihang)
-        {
-            _ltlh.Xoa(maloaihang);
         }
     }
 }

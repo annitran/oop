@@ -17,7 +17,7 @@ namespace do_an_oop.Pages
         public string tukhoa { get; set; } = string.Empty;
         public string ThongBao { get; set; } = string.Empty;
 
-        private IXuLyLoaiHang _xllh;
+        private IXuLyNghiepVu<LoaiHang> _xllh;
 
         public MH_DanhSachLoaiHangModel()
         {
@@ -28,7 +28,7 @@ namespace do_an_oop.Pages
         {
             try
             {
-                DanhSachLoaiHang = _xllh.HienThi_DSLH();
+                DanhSachLoaiHang = _xllh.HienThi_DanhSach();
             }
             catch (Exception ex)
             {
@@ -40,7 +40,7 @@ namespace do_an_oop.Pages
         {
             try
             {
-                DanhSachLoaiHang = _xllh.HienThi_DSLH(tukhoa);
+                DanhSachLoaiHang = _xllh.HienThi_DanhSach(tukhoa);
             }
             catch (Exception ex)
             {

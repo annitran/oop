@@ -11,8 +11,8 @@ namespace do_an_oop.Pages
 {
 	public class MH_DanhSachHangTonKhoModel : PageModel
     {
-        private IXuLySanPham _xlsp;
-        private IXuLyHoaDon _xlhd;
+        private IXuLyNghiepVu<SanPham> _xlsp;
+        private IXuLyNghiepVu<HoaDon> _xlhd;
 
         public List<SanPham> DanhSachSanPham { get; set; }
         public List<HoaDon> DanhSachHoaDon { get; set; }
@@ -27,8 +27,8 @@ namespace do_an_oop.Pages
 
         public void OnGet()
         {
-            DanhSachSanPham = _xlsp.HienThi_DSSP();
-            DanhSachHoaDon = _xlhd.HienThi_DSHD();
+            DanhSachSanPham = _xlsp.HienThi_DanhSach();
+            DanhSachHoaDon = _xlhd.HienThi_DanhSach();
             foreach (var sp in DanhSachSanPham)
             {
                 sp.SoLuongHangTonKho = _xlhd.ThongKe_HangTonKho(sp.MaHang);

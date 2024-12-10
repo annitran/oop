@@ -30,8 +30,8 @@ namespace do_an_oop.Pages
 
         public string ThongBao { get; set; } = string.Empty;
 
-        private IXuLySanPham _xlsp;
-        private IXuLyLoaiHang _xllh;
+        private IXuLyNghiepVu<SanPham> _xlsp;
+        private IXuLyNghiepVu<LoaiHang> _xllh;
 
         public MH_ThemSanPhamModel() : base()
         {
@@ -42,17 +42,17 @@ namespace do_an_oop.Pages
         public void OnGet()
         {
             ThongBao = "Nhập thông tin sản phẩm cần thêm!";
-            dslh = _xllh.HienThi_DSLH();
+            dslh = _xllh.HienThi_DanhSach();
         }
 
         public void OnPost()
         {
             try
             {
-                dslh = _xllh.HienThi_DSLH();
+                dslh = _xllh.HienThi_DanhSach();
 
                 SanPham sp = new SanPham(MaHang, TenHang, NSX, HSD, CtySX, LoaiHang, Gia);
-                _xlsp.ThemSanPham(sp);
+                _xlsp.Them(sp);
                 Response.Redirect("/MH_DanhSachSanPham");
             }
             catch (Exception ex)

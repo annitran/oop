@@ -17,7 +17,7 @@ namespace do_an_oop.Pages
         public string tukhoa { get; set; } = string.Empty;
         public string ThongBao { get; set; } = string.Empty;
 
-        private IXuLySanPham _xlsp;
+        private IXuLyNghiepVu<SanPham> _xlsp;
 
         public MH_DanhSachSanPhamModel()
         {
@@ -28,7 +28,7 @@ namespace do_an_oop.Pages
         {
             try
             {
-                DanhSachSanPham = _xlsp.HienThi_DSSP();
+                DanhSachSanPham = _xlsp.HienThi_DanhSach();
             }
             catch (Exception ex)
             {
@@ -40,7 +40,7 @@ namespace do_an_oop.Pages
         {
             try
             {
-                DanhSachSanPham = _xlsp.HienThi_DSSP(tukhoa);
+                DanhSachSanPham = _xlsp.HienThi_DanhSach(tukhoa);
             }
             catch (Exception ex)
             {

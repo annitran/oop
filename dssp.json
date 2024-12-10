@@ -18,5 +18,15 @@
     "LoaiHang": "3",
     "Gia": 20,
     "SoLuongHangTonKho": 0
+  },
+  {
+    "MaHang": 3,
+    "TenHang": "nuoc hoa roman",
+    "NSX": "2024-11-27T00:00:00",
+    "HSD": "2025-01-05T00:00:00",
+    "CtySX": "nuoc hoa chinh hang ABC",
+    "LoaiHang": "2",
+    "Gia": 450,
+    "SoLuongHangTonKho": 0
   }
 ]

@@ -3,18 +3,20 @@ using QLSP_LuuTru;
 
 namespace QLSP_XuLyNghiepVu
 {
-    public class XuLySanPham : IXuLySanPham
+    public class XuLySanPham : XuLyNghiepVu<SanPham>
     {
-        private ILuuTruSanPham _ltsp;
+        //Nếu như lớp cha có phương thức khởi tạo có tham số thì đòi hỏi lớp con phải có phương thức khởi tạo tương ứng
+        //và thực hiện gọi phương thức khởi tạo của lớp cha thông qua từ khoá base
+        //public <tên lớp>(<danh sách tham số của lớp con>) : base(<danh sách tham số>)
 
-        public XuLySanPham(ILuuTruSanPham ltsp)
+        public XuLySanPham(IXuLyLuuTru<SanPham> xllt) : base(xllt)
         {
-            _ltsp = ltsp;
+
         }
 
-        public List<SanPham> HienThi_DSSP(string tuKhoa = "")
+        public override List<SanPham> HienThi_DanhSach(string tuKhoa = "")
         {
-            List<SanPham> dssp = _ltsp.DocDanhSachSanPham();
+            List<SanPham> dssp = _xllt.DocDanhSach();
             List<SanPham> ds_tim_kiem = new List<SanPham>();
             //lọc sản phẩm theo từ khoá
             if (string.IsNullOrEmpty(tuKhoa))
@@ -34,29 +36,13 @@ namespace QLSP_XuLyNghiepVu
             }
         }
 
-        public SanPham TimSanPhamTheoID(int mahang)
+        public override void Them(SanPham sp)
         {
-            return _ltsp.TimSanPhamTheoID(mahang);
-        }
-
-        public void ThemSanPham(SanPham sp)
-        {
-            SanPham? tim_san_pham = _ltsp.TimSanPhamTheoTen(sp.TenHang);
-            if (tim_san_pham != null)
+            bool tim_san_pham = _xllt.TimTheoTen(sp.TenHang);
+            if (tim_san_pham)
             {
-                throw new Exception("Sản phẩm này đã tồn tại! Mời nhập lại!");
+                _xllt.Them(sp);
             }
-            _ltsp.Them(sp);
-        }
-
-        public void SuaSanPham(SanPham sp)
-        {
-            _ltsp.Sua(sp);
-        }
-
-        public void XoaSanPham(int mahang)
-        {
-            _ltsp.Xoa(mahang);
         }
     }
 }

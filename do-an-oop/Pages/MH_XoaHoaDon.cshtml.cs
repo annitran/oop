@@ -18,7 +18,7 @@ namespace do_an_oop.Pages
 
         public string ThongBao { get; set; } = string.Empty;
 
-        private IXuLyHoaDon _xlhd;
+        private IXuLyNghiepVu<HoaDon> _xlhd;
 
         public MH_XoaHoaDonModel()
         {
@@ -35,7 +35,7 @@ namespace do_an_oop.Pages
                     return;
                 }
 
-                hd = _xlhd.TimHoaDon(sohoadon);
+                hd = _xlhd.TimTheoID(sohoadon);
                 if (hd == null)
                 {
                     ThongBao = "Không tìm thấy hoá đơn này!";
@@ -51,7 +51,7 @@ namespace do_an_oop.Pages
         {
             try
             {
-                _xlhd.XoaHoaDon(sohoadon);
+                _xlhd.Xoa(sohoadon);
                 Response.Redirect("/MH_DanhSachHoaDon");
             }
             catch (Exception ex)

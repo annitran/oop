@@ -33,8 +33,8 @@ namespace do_an_oop.Pages
 
         public string ThongBao { get; set; } = string.Empty;
 
-        private IXuLySanPham _xlsp;
-        private IXuLyLoaiHang _xllh;
+        private IXuLyNghiepVu<SanPham> _xlsp;
+        private IXuLyNghiepVu<LoaiHang> _xllh;
 
         public MH_SuaSanPhamModel() : base()
         {
@@ -46,7 +46,7 @@ namespace do_an_oop.Pages
         {
             try
             {
-                dslh = _xllh.HienThi_DSLH();
+                dslh = _xllh.HienThi_DanhSach();
 
                 if (mahang == 0)
                 {
@@ -54,7 +54,7 @@ namespace do_an_oop.Pages
                     return;
                 }
 
-                sp = _xlsp.TimSanPhamTheoID(mahang);
+                sp = _xlsp.TimTheoID(mahang);
                 if (sp == null)
                 {
                     ThongBao = "Không tìm thấy sản phẩm này!";
@@ -70,11 +70,11 @@ namespace do_an_oop.Pages
         {
             try
             {
-                dslh = _xllh.HienThi_DSLH();
+                dslh = _xllh.HienThi_DanhSach();
 
                 SanPham sp_sua = new SanPham(mahang, TenHang, NSX, HSD, CtySX, LoaiHang, Gia);
                 sp_sua.MaHang = mahang;
-                _xlsp.SuaSanPham(sp_sua);
+                _xlsp.Sua(sp_sua);
                 Response.Redirect("/MH_DanhSachSanPham");
             }
             catch (Exception ex)

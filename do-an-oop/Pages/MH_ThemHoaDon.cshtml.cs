@@ -28,8 +28,8 @@ namespace do_an_oop.Pages
 
         public string ThongBao { get; set; } = string.Empty;
 
-        IXuLyHoaDon _xlhd;
-        IXuLySanPham _xlsp;
+        IXuLyNghiepVu<HoaDon> _xlhd;
+        IXuLyNghiepVu<SanPham> _xlsp;
 
         public MH_ThemHoaDonModel()
         {
@@ -39,7 +39,7 @@ namespace do_an_oop.Pages
 
         public void OnGet()
         {
-            dssp = _xlsp.HienThi_DSSP();
+            dssp = _xlsp.HienThi_DanhSach();
             ThongBao = "Nhập thông tin hoá đơn cần thêm!";
         }
 
@@ -47,10 +47,10 @@ namespace do_an_oop.Pages
         {
             try
             {
-                dssp = _xlsp.HienThi_DSSP();
+                dssp = _xlsp.HienThi_DanhSach();
 
                 HoaDon hd = new HoaDon(SoHoaDon, NgayHoaDon, LoaiHoaDon, MaHang, TenHang, SoLuong);
-                _xlhd.ThemHoaDon(hd);
+                _xlhd.Them(hd);
                 Response.Redirect("/MH_DanhSachHoaDon");
             }
             catch (Exception ex)

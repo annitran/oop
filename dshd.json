@@ -22,5 +22,21 @@
     "MaHang": 2,
     "TenHang": "cam",
     "SoLuong": 15
+  },
+  {
+    "SoHoaDon": 4,
+    "NgayHoaDon": "2024-12-10T00:00:00",
+    "LoaiHoaDon": "Hoá đơn nhập hàng",
+    "MaHang": 3,
+    "TenHang": "nuoc hoa roman",
+    "SoLuong": 11
+  },
+  {
+    "SoHoaDon": 5,
+    "NgayHoaDon": "2024-12-10T00:00:00",
+    "LoaiHoaDon": "Hoá đơn bán hàng",
+    "MaHang": 3,
+    "TenHang": "nuoc hoa roman",
+    "SoLuong": 5
   }
 ]

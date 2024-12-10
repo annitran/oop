@@ -3,44 +3,31 @@ using QLSP_Entity;
 
 namespace QLSP_LuuTru
 {
-	public class LuuTruLoaiHang : ILuuTruLoaiHang
+	public class LuuTruLoaiHang : XuLyLuuTru<LoaiHang>
 	{
         private const string filePath = "/Users/anan/Cá nhân/LTHDT/do-an-oop/dslh.json";
 
-        public List<LoaiHang> DocDanhSachLoaiHang()
+        public override string getfilePath()
         {
-            StreamReader file = new StreamReader(filePath);
-            string dslh_json = file.ReadToEnd();
-            var dslh = JsonConvert.DeserializeObject<List<LoaiHang>>(dslh_json);
-            file.Close();
-
-            return dslh;
+            return filePath;
         }
 
-        public void LuuDanhSachLoaiHang(List<LoaiHang> dslh)
+        public override bool TimTheoTen(string tenloaihang)
         {
-            string dslh_json = JsonConvert.SerializeObject(dslh, Formatting.Indented);
-            StreamWriter file = new StreamWriter(filePath);
-            file.Write(dslh_json);
-            file.Close();
-        }
-
-        public LoaiHang TimLoaiHangTheoTen(string tenloaihang)
-        {
-            List<LoaiHang> dslh = DocDanhSachLoaiHang();
+            List<LoaiHang> dslh = DocDanhSach();
             foreach (var s in dslh)
             {
                 if (s.TenLoaiHang == tenloaihang)
                 {
-                    return s;
+                    throw new Exception("Đã tồn tại loại hàng này!");
                 }
             }
-            return null;
+            return true;
         }
 
-        public LoaiHang TimTheoID(int maloaihang)
+        public override LoaiHang TimTheoID(int maloaihang)
         {
-            List<LoaiHang> dslh = DocDanhSachLoaiHang();
+            List<LoaiHang> dslh = DocDanhSach();
             foreach (var lh in dslh)
             {
                 if (lh.MaLoaiHang == maloaihang)
@@ -51,9 +38,9 @@ namespace QLSP_LuuTru
             return null;
         }
 
-        public void Them(LoaiHang lh)
+        public override void Them(LoaiHang lh)
         {
-            List<LoaiHang> dslh = DocDanhSachLoaiHang();
+            List<LoaiHang> dslh = DocDanhSach();
             int maxId = 0;
             foreach (var s in dslh)
             {
@@ -64,12 +51,12 @@ namespace QLSP_LuuTru
             }
             lh.MaLoaiHang = maxId + 1;
             dslh.Add(lh);
-            LuuDanhSachLoaiHang(dslh);
+            LuuDanhSach(dslh);
         }
 
-        public void Sua(LoaiHang lh)
+        public override void Sua(LoaiHang lh)
         {
-            List<LoaiHang> dslh = DocDanhSachLoaiHang();
+            List<LoaiHang> dslh = DocDanhSach();
             for (int i = 0; i < dslh.Count; i++)
             {
                 if (dslh[i].MaLoaiHang == lh.MaLoaiHang)
@@ -77,12 +64,12 @@ namespace QLSP_LuuTru
                     dslh[i] = lh;
                 }
             }
-            LuuDanhSachLoaiHang(dslh);
+            LuuDanhSach(dslh);
         }
 
-        public void Xoa(int maloaihang)
+        public override void Xoa(int maloaihang)
         {
-            List<LoaiHang> dslh = DocDanhSachLoaiHang();
+            List<LoaiHang> dslh = DocDanhSach();
             for (int i = dslh.Count - 1; i >= 0; i--)
             {
                 if (dslh[i].MaLoaiHang == maloaihang)
@@ -90,7 +77,7 @@ namespace QLSP_LuuTru
                     dslh.RemoveAt(i);
                 }
             }
-            LuuDanhSachLoaiHang(dslh);
+            LuuDanhSach(dslh);
         }
     }
 }

@@ -3,18 +3,16 @@ using QLSP_LuuTru;
 
 namespace QLSP_XuLyNghiepVu
 {
-	public class XuLyHoaDon : IXuLyHoaDon
+	public class XuLyHoaDon : XuLyNghiepVu<HoaDon>
 	{
-        private ILuuTruHoaDon _lthd;
-
-        public XuLyHoaDon(ILuuTruHoaDon lthd)
+        public XuLyHoaDon(IXuLyLuuTru<HoaDon> xllt) : base(xllt)
         {
-            _lthd = lthd;
+
         }
 
-        public List<HoaDon> HienThi_DSHD(string tukhoa = "")
+        public override List<HoaDon> HienThi_DanhSach(string tukhoa = "")
         {
-            var dshd = _lthd.DocDanhSachHoaDon();
+            var dshd = _xllt.DocDanhSach();
             var ds_tim_kiem = new List<HoaDon>();
             //lọc theo từ khoá
             if (string.IsNullOrEmpty(tukhoa))
@@ -34,34 +32,19 @@ namespace QLSP_XuLyNghiepVu
             }
         }
 
-        public HoaDon TimHoaDon(int sohoadon)
+        public override void Them(HoaDon hd)
         {
-            return _lthd.Tim(sohoadon);
-        }
-
-        public void ThemHoaDon(HoaDon hd)
-        {
-            HoaDon? tim_hoa_don = _lthd.Tim(hd.SoHoaDon);
+            HoaDon? tim_hoa_don = _xllt.TimTheoID(hd.SoHoaDon);
             if (tim_hoa_don != null)
             {
                 throw new Exception("Số hoá đơn này đã tồn tại! Mời nhập lại!");
             }
-            _lthd.Them(hd);
+            _xllt.Them(hd);
         }
 
-        public void SuaHoaDon(HoaDon hd)
+        public override int ThongKe_HangTonKho(int mahang)
         {
-            _lthd.Sua(hd);
-        }
-
-        public void XoaHoaDon(int sohoadon)
-        {
-            _lthd.Xoa(sohoadon);
-        }
-
-        public int ThongKe_HangTonKho(int mahang)
-        {
-            List<HoaDon> dshd = _lthd.DocDanhSachHoaDon();
+            List<HoaDon> dshd = _xllt.DocDanhSach();
 
             int SoLuongNhap = 0;
             int SoLuongBan = 0;

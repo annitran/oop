@@ -18,7 +18,7 @@ namespace do_an_oop.Pages
 
         public string ThongBao { get; set; } = string.Empty;
 
-        private IXuLySanPham _xlsp;
+        private IXuLyNghiepVu<SanPham> _xlsp;
 
         public MH_XoaSanPhamModel() : base()
         {
@@ -35,7 +35,7 @@ namespace do_an_oop.Pages
                     return;
                 }
 
-                sp = _xlsp.TimSanPhamTheoID(mahang);
+                sp = _xlsp.TimTheoID(mahang);
                 if (sp == null)
                 {
                     ThongBao = "Không tìm thấy sản phẩm này!";
@@ -51,7 +51,7 @@ namespace do_an_oop.Pages
         {
             try
             {
-                _xlsp.XoaSanPham(mahang);
+                _xlsp.Xoa(mahang);
                 Response.Redirect("/MH_DanhSachSanPham");
             }
             catch (Exception ex)

@@ -31,8 +31,8 @@ namespace do_an_oop.Pages
 
         public string ThongBao { get; set; } = string.Empty;
 
-        IXuLyHoaDon _xlhd;
-        IXuLySanPham _xlsp;
+        IXuLyNghiepVu<HoaDon> _xlhd;
+        IXuLyNghiepVu<SanPham> _xlsp;
 
         public MH_SuaHoaDonModel()
         {
@@ -44,7 +44,7 @@ namespace do_an_oop.Pages
         {
             try
             {
-                dssp = _xlsp.HienThi_DSSP();
+                dssp = _xlsp.HienThi_DanhSach();
 
                 if (sohoadon == 0)
                 {
@@ -52,7 +52,7 @@ namespace do_an_oop.Pages
                     return;
                 }
 
-                hd = _xlhd.TimHoaDon(sohoadon);
+                hd = _xlhd.TimTheoID(sohoadon);
                 if (hd == null)
                 {
                     ThongBao = "Không tìm thấy hoá đơn này!";
@@ -68,11 +68,11 @@ namespace do_an_oop.Pages
         {
             try
             {
-                dssp = _xlsp.HienThi_DSSP();
+                dssp = _xlsp.HienThi_DanhSach();
 
                 HoaDon hd_sua = new HoaDon(sohoadon, NgayHoaDon, LoaiHoaDon, MaHang, TenHang, SoLuong);
                 hd_sua.SoLuong = sohoadon;
-                _xlhd.SuaHoaDon(hd_sua);
+                _xlhd.Sua(hd_sua);
                 Response.Redirect("/MH_DanhSachHoaDon");
             }
             catch (Exception ex)

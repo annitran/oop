@@ -18,7 +18,7 @@ namespace do_an_oop.Pages
 
         public string ThongBao { get; set; } = string.Empty;
 
-        IXuLyLoaiHang _xllh;
+        IXuLyNghiepVu<LoaiHang> _xllh;
 
         public MH_ThemLoaiHangModel()
         {
@@ -35,7 +35,7 @@ namespace do_an_oop.Pages
             try
             {
                 LoaiHang lh = new LoaiHang(MaLoaiHang, TenLoaiHang);
-                _xllh.ThemLoaiHang(lh);
+                _xllh.Them(lh);
                 Response.Redirect("/MH_DanhSachLoaiHang");
             }
             catch (Exception ex)

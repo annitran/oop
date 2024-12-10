@@ -21,7 +21,7 @@ namespace do_an_oop.Pages
 
         public string ThongBao { get; set; } = string.Empty;
 
-        private IXuLyLoaiHang _xllh;
+        private IXuLyNghiepVu<LoaiHang> _xllh;
 
         public MH_SuaLoaiHangModel()
         {
@@ -38,7 +38,7 @@ namespace do_an_oop.Pages
                     return;
                 }
 
-                lh = _xllh.TimLoaiHang(maloaihang);
+                lh = _xllh.TimTheoID(maloaihang);
                 if (lh == null)
                 {
                     ThongBao = "Không tìm thấy loại hàng này!";
@@ -56,7 +56,7 @@ namespace do_an_oop.Pages
             {
                 LoaiHang lh_sua = new LoaiHang(maloaihang, TenLoaiHang);
                 lh_sua.MaLoaiHang = maloaihang;
-                _xllh.SuaLoaiHang(lh_sua);
+                _xllh.Sua(lh_sua);
                 Response.Redirect("/MH_DanhSachLoaiHang");
             }
             catch (Exception ex)
